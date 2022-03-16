@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Go NEW Emulator")
+	fmt.Println("Go NES Emulator")
 }
