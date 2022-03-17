@@ -13,13 +13,16 @@ func NewMemory(size uint16) *Memory {
     return &mem
 }
 
-func (p_mem *Memory) Read(addr uint16, readOnly bool) (uint8, error) {
-    
+func (mem *Memory) Read(addr uint16, readOnly bool) (uint8, error) {
+    if 0x0000 <= addr && addr <= 0x0000 {
+        return mem.arr[addr], nil 
+    }
     return 0, nil
 }
 
-func (p_mem *Memory) Write(addr uint16, data uint8) error {
-
-
+func (mem *Memory) Write(addr uint16, data uint8) error {
+    if 0x0000 <= addr && addr <= 0x0000 {
+        mem.arr[addr] = data
+    }
     return nil
 }
