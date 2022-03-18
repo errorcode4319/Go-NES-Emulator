@@ -4,171 +4,338 @@ package core
 
 //Return Additional Cycle
 
-func(cpu *CPU) OP_ADC() uint8 {
+// Add with Carry  
+func OP_ADC(cpu *CPU) uint8 {
 
+    return 0
 }
-func(cpu *CPU) OP_AND() uint8 {
 
+// And (with Accumulator)
+func OP_AND(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_ASL() uint8 {
 
+// Arithmetic Shift Left
+func OP_ASL(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_BCC() uint8 {
 
+// Branch on Carry Clear 
+func OP_BCC(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_BCS() uint8 {
 
+// Branch on Carry Set 
+func OP_BCS(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_BEQ() uint8 {
 
+// Branch on Equal (zero set)
+func OP_BEQ(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_BIT() uint8 {
 
+// Bit Test
+func OP_BIT(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_BMI() uint8 {
 
+// Branch on Minus
+func OP_BMI(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_BNE() uint8 {
 
+// Branch on Not Equal 
+func OP_BNE(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_BPL() uint8 {
 
+// Branch on Plus (negative clear) 
+func OP_BPL(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_BRK() uint8 {
 
+// Break / Interrupt
+func OP_BRK(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_BVC() uint8 {
 
+// Branch on Overflow Clear 
+func OP_BVC(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_BVS() uint8 {
 
+// Branch on Ovwerflow Set 
+func OP_BVS(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_CLC() uint8 {
 
+// Clear Carry 
+func OP_CLC(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_CLD() uint8 {
 
+// Clear Decimal
+func OP_CLD(cpu *CPU) uint8 {
+    
+    return 0 
 }
-func(cpu *CPU) OP_CLI() uint8 {
 
+// Clear Interrupt Disable 
+func OP_CLI(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_CLV() uint8 {
 
+// Clear Overflow 
+func OP_CLV(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_CMP() uint8 {
 
+// Compare (with accumulator)
+func OP_CMP(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_CPX() uint8 {
 
+// Compare with X 
+func OP_CPX(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_CPY() uint8 {
 
+// Compare with Y
+func OP_CPY(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_DEC() uint8 {
 
+// Decrement
+func OP_DEC(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_DEX() uint8 {
 
+// Decrement X 
+func OP_DEX(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_DEY() uint8 {
 
+// Decrement Y 
+func OP_DEY(cpu *CPU) uint8 {
+    
+    return 0 
 }
-func(cpu *CPU) OP_EOR() uint8 {
 
+// Exclusive or (with accumulator)
+func OP_EOR(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_INC() uint8 {
 
+// Increment
+func OP_INC(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_INX() uint8 {
 
+// Increment X 
+func OP_INX(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_INY() uint8 {
 
+// Increment Y
+func OP_INY(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_JMP() uint8 {
 
+// Jump
+func OP_JMP(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_JSR() uint8 {
 
+// Jump Subroutine
+func OP_JSR(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_LDA() uint8 {
 
+// Load Accumulator 
+func OP_LDA(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_LDX() uint8 {
 
+// Load X 
+func OP_LDX(cpu *CPU) uint8 {
+    
+    return 0 
 }
-func(cpu *CPU) OP_LDY() uint8 {
 
+// Load Y 
+func OP_LDY(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_LSR() uint8 {
 
+// Logical Shift Right
+func OP_LSR(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_NOP() uint8 {
 
+// No Operation
+func OP_NOP(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_ORA() uint8 {
 
+// Or (with accumulator) 
+func OP_ORA(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_PHA() uint8 {
 
+// Push Accumulator
+func OP_PHA(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_PHP() uint8 {
 
+// Push Processor Status (SR) 
+func OP_PHP(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_PLA() uint8 {
 
+// Pull accumulator 
+func OP_PLA(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_PLP() uint8 {
 
+// Pull Processor Status (SR)
+func OP_PLP(cpu *CPU) uint8 {
+
+    return 0 
 }
-func(cpu *CPU) OP_ROL() uint8 {
 
+// Rotate Left 
+func OP_ROL(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_ROR() uint8 {
 
+// Rotate Right 
+func OP_ROR(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_RTI() uint8 {
 
+// Return from Interrupt
+func OP_RTI(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_RTS() uint8 {
 
+// Return from Subroutine 
+func OP_RTS(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_SBC() uint8 {
 
+// Subtract with Carry
+func OP_SBC(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_SEC() uint8 {
 
+// Set Carry 
+func OP_SEC(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_SED() uint8 {
 
+// Set Decimal
+func OP_SED(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_SEI() uint8 {
 
+// Set Interrupt Disable
+func OP_SEI(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_STA() uint8 {
 
+// Store Accumulator
+func OP_STA(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_STX() uint8 {
 
+// Store X
+func OP_STX(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_STY() uint8 {
 
+// Store Y
+func OP_STY(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_TAX() uint8 {
 
+// Transfer Accumulator to X
+func OP_TAX(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_TAY() uint8 {
 
+// Transfer Accumulator to Y
+func OP_TAY(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_TSX() uint8 {
 
+// Transfer stack pointer to X
+func OP_TSX(cpu *CPU) uint8 {
+    
+    return 0
 }
-func(cpu *CPU) OP_TXA() uint8 {
 
+// Transfer X to accumulator
+func OP_TXA(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_TXS() uint8 {
 
+// Transfer X to stack pointer 
+func OP_TXS(cpu *CPU) uint8 {
+
+    return 0
 }
-func(cpu *CPU) OP_TYA() uint8 {
 
+// Transfer Y to accumulator
+func OP_TYA(cpu *CPU) uint8 {
+
+    return 0
 }

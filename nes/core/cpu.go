@@ -1,15 +1,20 @@
-package core 
+package core
+
+import (
+    "errors"
+)
 
 // MOS 6502
 // Instruction Set: https://www.masswerk.at/6502/6502_instruction_set.html
 // http://archive.6502.org/datasheets/rockwell_r650x_r651x.pdf
 
 type CPU struct {
-    A      uint8       //Accumulator
-    X      uint8       //X Register
-    Y      uint8       //Y Register 
-    Sp     uint8       //Stack Pointer 
-    Pc     uint16      //Program Counter
+    A       uint8       //Accumulator
+    X       uint8       //X Register
+    Y       uint8       //Y Register 
+    Stat    uint8       //Status Register
+    Sp      uint8       //Stack Pointer 
+    Pc      uint16      //Program Counter
 
     Fetchd      uint8
 
@@ -22,7 +27,7 @@ type CPU struct {
 }
 
 const ( // 6502 Flags
-    FLG_C uint8 = 1 << iota // Carry Bit
+    FLG_C uint8 = iota // Carry Bit
     FLG_Z   // zero
     FLG_I   // disable interrupts
     FLG_D   // decimal Mode
@@ -38,8 +43,43 @@ func NewCPU(bus *NESBus) *CPU {
     return &cpu
 }
 
-func(cpu *CPU) SIG_clock() {
-    
+func(cpu *CPU) SetFlag(flag uint8, value bool) error {
+    if flag >= 8 {
+        return errors.New("Invalid Flag")
+    }
+    if value == true {
+        cpu.Stat |= (1 << flag) 
+    } else {
+        cpu.Stat &= 255 - (1 << flag)
+    }
+    return nil 
+} 
+
+func(cpu *CPU) GetFlag(flag uint8) (bool, error) {
+    if flag >= 8 {
+        return false, errors.New("Invalid Flag")
+    }
+    if (cpu.Stat & (1 << flag)) != 0 {
+        return true, nil
+    }
+    return false, nil 
+}
+
+func(cpu *CPU) SIG_clock() error {
+    if cpu.Cycles == 0 {
+        opcode, err := cpu.read(cpu.Pc)
+        if err != nil {
+            return errors.New("Cannot Read OPCODE")
+        }
+
+        /* Address Mode + OPCODE */
+
+        /* Add Cycles */
+
+        cpu.Opcode = opcode 
+    }
+    cpu.Cycles--
+    return nil 
 }
 
 func(cpu *CPU) SIG_reset() {
